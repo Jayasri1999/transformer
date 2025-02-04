@@ -23,4 +23,5 @@ Steps:
 
 
 $creds = Get-Credential -Credential admin >> Invoke-WebRequest -Uri "http://localhost:8161/api/message/inputQueue?type=queue" >> -Method Post >> -Body '<order><id>12345</id><customer>John Doe</customer><amount>250.00</amount></order>' >> -ContentType "text/xml" >> -Credential $creds
+
 ->  We can observe the results in ActiveMQ web console under "Queues" tab.
